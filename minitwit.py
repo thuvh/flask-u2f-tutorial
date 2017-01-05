@@ -27,7 +27,7 @@ try:
     with open('u2fval_api_token', 'r') as f:
         U2FVAL_API_TOKEN = f.read().strip()
 except IOError:
-    print 'No U2FVAL API key found.'
+    print ('No U2FVAL API key found.')
 
 # U2FVAL client
 u2fval = Client(U2FVAL_HOST, ApiToken(U2FVAL_API_TOKEN))
@@ -322,7 +322,7 @@ if __name__ == '__main__':
     import sys
     if '--init-db' in sys.argv:
         init_db()
-        print "Database initialized!"
+        print ("Database initialized!")
         sys.exit(0)
 
     import ssl
